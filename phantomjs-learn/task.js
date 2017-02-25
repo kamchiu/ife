@@ -41,7 +41,7 @@ page.open(url, function(status) {
 
                     item.title = $this.find('h3 a').text();
                     item.link = $this.find('h3 a').attr('href');
-                    item.info = $this.find('.c-abstract').html();
+                    item.info = $this.find('.c-abstract').text();
                     item.pic = $this.find('.c-img').attr('src');
                     dataList.push(item);
                     
