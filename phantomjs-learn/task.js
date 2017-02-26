@@ -13,7 +13,7 @@ if(system.args.length === 1) {
 } 
 
 result.keyword = system.args[1];
-url = url + result.keyword;
+url = url + encodeURIComponent(result.keyword);
 t = Date.now();
 
 page.open(url, function(status) {

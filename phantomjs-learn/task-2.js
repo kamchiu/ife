@@ -51,14 +51,14 @@ page.open(url, function(status) {
 
             var dataList = page.evaluate(function() {
                 var dataList = [];
-                $('.result').each(function() {
+                $('.result[tpl="www_normal"]').each(function() {
                     var item = {},
                       $this = $(this);
 
-                    item.title = $this.find('h3 a').text();
-                    item.link = $this.find('h3 a').attr('href');
+                    item.title = $this.find('h3.c-title').text();
+                    item.link = $this.find('.c-container > a').attr('href');
                     item.info = $this.find('.c-abstract').text();
-                    item.pic = $this.find('.c-img').attr('src');
+                    item.pic = $this.find('.c-img > img').attr('src');
                     dataList.push(item);
                     
                 });
